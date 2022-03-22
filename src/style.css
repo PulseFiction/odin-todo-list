@@ -1,0 +1,181 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --clr-dark-slate: #313644;
+    --clr-beige: #d4c6bad3;
+    --clr-white: #ffffff;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+}
+
+.header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    border: 1px solid var(--clr-dark-slate);
+    display: flex;
+    height: 100vh;
+    
+    
+
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+hr {
+    margin-top: 0.4rem;
+    color: var(--clr-dark-slate);
+}
+
+img {
+    vertical-align: middle;
+    height: 3rem;
+   
+   
+    
+}
+
+input {
+    margin-top: 2rem;;
+    width: 10rem;
+    height: 2rem;
+    align-self: center;
+    text-align: center;
+    font-size: 10pt;
+    background-color: var(--clr-dark-slate);
+    color: var(--clr-white);
+    border: solid;
+    
+}
+
+
+.sidebar {
+    border-right: 5px solid var(--clr-white);
+    background-color: var(--clr-beige);
+    width: 20rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;;
+}
+
+.sidebar__button {
+    margin-top: 0.2rem;
+    background: none;
+    border: none;
+    font-size: 15pt;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--clr-white);
+    
+    
+
+}
+
+.main {
+    background-color: var(--clr-dark-slate);
+    width: 100%;
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    
+}
+
+/*
+.main__task {
+    display: flex;
+    background-color: #ccc;
+    color: var(--clr-dark-slate);
+    width: 20rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem;
+}
+*/
+
+.main__add-button {
+    margin-top: 1rem;
+    padding: 0.2rem;
+    font-size: 20pt;
+}
+
+.main__task-list {
+    margin-top: 2rem;
+    background-color: var(--clr-white);
+    border-radius: 10px;
+    width: 20rem;
+    height: 2rem;
+    color: var(--clr-dark-slate);
+    text-align: center;
+
+}
+
+
+
+.footer {
+    height: 1.6rem;
+    text-align: center;
+}
+
+.sidebar__error {
+    color: red;
+    display: none;
+}
+
+.sidebar li {
+    margin-top: 1rem;
+    list-style: none;
+    font-size: 20pt;
+}
+
+.sidebar li::before {
+    content: url(./cover.svg);
+    vertical-align: middle;
+    display: inline-block;
+    
+}
+
+/* Hovers */
+
+.sidebar__button:hover {
+    cursor: pointer;
+    background-color: #313644;
+    border-radius: 5px;
+    
+}
+
+.sidebar li:hover,
+.sidebar li:focus {
+    cursor: pointer;
+    color: white
+}
+
+.attribution a:hover {
+    color:rgb(255, 255, 255);
+    background-color: black;
+}
+

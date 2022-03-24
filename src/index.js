@@ -1,33 +1,3 @@
-import "./style.css";
-import taskList from "./tasklist";
-
-const addButton = document.querySelector(".sidebar__button");
-
-/*
-function newProject() {
-    
-    const userInput = document.querySelector('.sidebar__input')
-    const projectName = userInput.value;
-    
-    const projectList = document.querySelector('.sidebar__list')
-    const projectListEntry = document.createElement('li');
-    
-    const errorMessage = document.querySelector('.sidebar__error')
-
-    if (projectName.length <= 0) {
-        errorMessage.style.display = 'block'
-    } else {
-        errorMessage.style.display = 'none'
-        projectListEntry.textContent = projectName;
-        projectListEntry.classList.add(projectName);
-        projectList.appendChild(projectListEntry);
-    }
-
-    projectListEntry.addEventListener('click', taskList)
-
-}
-*/
-
 class Project {
   constructor(name) {
     this.name = name;
@@ -35,43 +5,43 @@ class Project {
 }
 
 class UI {
-  static newProject() {
-    const userInput = document.querySelector(".sidebar__input");
-    const projectName = userInput.value;
+  static addProjectName() {
+    const projectValue = document.querySelector(".sidebar__input").value;
+    const alert = document.querySelector(".sidebar__error");
+    const sidebar = document.querySelector(".sidebar__list");
+    const listEntry = document.createElement("li");
 
-    const projectList = document.querySelector(".sidebar__list");
-    const projectListEntry = document.createElement("li");
-
-    const errorMessage = document.querySelector(".sidebar__error");
-    
-
-    if (projectName.length <= 0) {
-      errorMessage.style.display = "block";
-      
-    } else {
-      errorMessage.style.display = "none";
-      projectListEntry.textContent = projectName;
-      projectListEntry.classList.add(projectName);
-      projectList.appendChild(projectListEntry);
-
-      const book = new Project(projectName);
+    if (projectValue < 1) {
+      alert.style.display = "block";
     }
+    listEntry.textContent = projectValue;
+    listEntry.className = projectValue;
+    sidebar.appendChild(listEntry);
 
-    projectListEntry.addEventListener("click", taskList);
+    return listEntry;
   }
 
-  static addTask() {
-     
+  static addTasks() {
+    
+  }
 
+  static displayTasks() {
+    const main = document.querySelector('.main')
 
+    // Add Button
+    const addTaskButton = document.createElement('button');
+    addTaskButton.className = '.main__add-button'
+
+    //
+   
+    
     
   }
 }
 
-class Store {
-  static addBook(book) {}
-}
+const projectAddButton = document.querySelector(".sidebar__button");
 
-addButton.addEventListener("click", UI.newProject);
+projectAddButton.addEventListener("click", UI.addProjectName);
 
-
+const project = UI.addProjectName()
+project.addEventListener('click', UI.displayTasks)

@@ -136,7 +136,11 @@ input {
     font-size: 20pt;
 }
 
-
+.main__task-div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
 
 .main__task-list {
     margin-top: 2rem;
@@ -179,6 +183,7 @@ input {
     margin-top: 0.5rem;
     width: 98%;
     color: var(--clr-white);
+    
 }
 
 .main__submit-button {

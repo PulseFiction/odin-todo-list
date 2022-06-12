@@ -91,6 +91,15 @@ body {
     font-weight: 400;
 }
 
+.sidebar__projects__ul {
+    padding: 1rem;
+}
+
+.sidebar__projects__ul li {
+    list-style: none;
+    display: flex;
+    align-content: center;
+}
 /* Main */
 
 .main {
@@ -144,3 +153,11 @@ body {
     
 
 }
+
+.project__container {
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--clr-secondary-slate);
+    color: white;
+}
+

@@ -143,9 +143,12 @@ body {
 }
 
 .projects__div {
-    border: 1px solid var(--clr-secondary-slate);
+    padding-top: 2rem;
     width: 90%;
     height: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
 .add-project__input-error {
@@ -159,5 +162,24 @@ body {
     height: 20rem;
     background-color: var(--clr-secondary-slate);
     color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 10px 10px 0px var(--clr-shadow-black);
+    transition: all 1s ease-out;
+}
+
+.project__container h3 {
+    padding: 1rem;
+}
+
+.project__container hr {
+    width: 70%;
+}
+
+.project__container:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }
 

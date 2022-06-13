@@ -21,6 +21,7 @@ export function addProject() {
 
         
         submit.addEventListener('click', () => {
+
             const projectsList = document.querySelector('.sidebar__projects__ul');
             const projectMain = document.querySelector('.projects__div');
             if (titleInput.value <= 0) {
@@ -33,24 +34,27 @@ export function addProject() {
                 projectListItem.appendChild(arrowIcon);
                 
                 const projectListName = document.createElement('h3');
+                const line = document.createElement('hr');
                 const projectBoxName = document.createElement('h3');
                 const projectDiv = document.createElement('div');
                 projectDiv.classList.add('project__container')
                 const todoDiv = document.createElement('div');
                 
+               
                 projectListName.textContent = titleInput.value;
                 projectBoxName.textContent = titleInput.value;
 
 
                 projectListItem.appendChild(projectListName)
                 projectDiv.appendChild(projectBoxName);
+                projectDiv.appendChild(line);
                 projectDiv.appendChild(todoDiv);
 
                 projectsList.appendChild(projectListItem);
                 projectMain.appendChild(projectDiv)
             
 
-
+                
 
 
 

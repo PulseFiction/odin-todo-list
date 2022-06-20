@@ -25,7 +25,6 @@ export function openProject() {
 
         title.textContent = target.textContent;
         addProjectDiv.style.display = 'none';
-        projectContainer.style.display = 'none';
 
         const projectPage = document.createElement('div');
         projectPage.classList.add('project__page');

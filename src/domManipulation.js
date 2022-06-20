@@ -103,14 +103,6 @@ export function onLoad() {
 
     mainDiv.appendChild(addProjectDiv)
 
-    // Projects Div
-
-    const projectsDiv = document.createElement('div');
-    projectsDiv.classList.add('projects__div')
-
-    mainDiv.appendChild(projectsDiv);
-
-
 
     // Content Appends
 

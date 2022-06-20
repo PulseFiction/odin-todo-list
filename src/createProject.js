@@ -19,7 +19,6 @@ export function addProject() {
 
     submit.addEventListener("click", () => {
       const projectsList = document.querySelector(".sidebar__projects__ul");
-      const projectMain = document.querySelector(".projects__div");
       if (titleInput.value <= 0) {
         titleInput.classList.add("add-project__input-error");
         titleInput.placeholder = "Name not entered!";

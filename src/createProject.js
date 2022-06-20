@@ -3,6 +3,7 @@ import Arrow from "./images/arrow.png";
 export function addProject() {
   const button = document.querySelector(".add-project__button");
   const projectDiv = document.querySelector(".add-project__div");
+  const main = document.querySelector('.main')
 
   button.addEventListener("click", () => {
     const titleInput = document.createElement("input");
@@ -29,36 +30,28 @@ export function addProject() {
         arrowIcon.src = Arrow;
         projectListItem.appendChild(arrowIcon);
 
+
+
+        // Create page for project
+        const projectPage = document.createElement('div');
+        projectPage.classList.add('project__page');
+        main.appendChild(projectPage);
+        
+
+        // ------------------------
         const projectListName = document.createElement("h3");
         projectListName.classList.add("list__project__heading");
-        
-        //const line = document.createElement("hr");
-        //const projectBoxName = document.createElement("h3");
-        
-        //const projectDiv = document.createElement("div");
-        //projectDiv.classList.add("project__container");
-        //const todoDiv = document.createElement("div");
 
         projectListName.textContent = titleInput.value;
-        //projectBoxName.textContent = titleInput.value;
 
         projectListItem.appendChild(projectListName);
-        //projectDiv.appendChild(projectBoxName);
-        //projectDiv.appendChild(line);
-       // projectDiv.appendChild(todoDiv);
 
         projectsList.appendChild(projectListItem);
-        //projectMain.appendChild(projectDiv);
 
         button.style.display = "block";
         submit.style.display = "none";
         titleInput.style.display = "none";
       }
     });
-
-    
-
-
-})
-
+  });
 }

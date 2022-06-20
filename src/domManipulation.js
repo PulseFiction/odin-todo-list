@@ -85,7 +85,7 @@ export function onLoad() {
     headerDiv.classList.add("header");
     const headerTitle = document.createElement("h2");
     headerTitle.classList.add("header__title");
-    headerTitle.textContent = "Projects";
+    headerTitle.textContent = "Add a project";
     headerDiv.appendChild(headerTitle);
   
     // Main

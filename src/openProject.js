@@ -1,4 +1,4 @@
-
+import addWhite from "./images/Add-white.png"
 
 
 export function openProject() {
@@ -20,8 +20,26 @@ export function openProject() {
 
         title.textContent = target.textContent;
         addProjectDiv.style.display = 'none';
-        projectPage.style.display = 'block';
+        projectPage.style.display = 'flex';
+
+        const taskDiv = document.createElement('button');
+        taskDiv.classList.add('project__tasks')
+        const taskText = document.createElement('p');
+        taskDiv.textContent = 'Add new Task';
+        const addIcon = new Image();
+        addIcon.src = addWhite;
+        taskDiv.appendChild(addIcon);
+  
+        
+
+        projectPage.appendChild(taskDiv);
+
+        
         
     }
+
+    
 }
+
+
 

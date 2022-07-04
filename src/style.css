@@ -327,3 +327,9 @@ li h3:active {
     box-shadow: 0px 10px 10px 0px var(--clr-shadow-black);
 }
 
+.trash:hover {
+    cursor: pointer;
+    background-color: #5B5B5B;
+    border-radius: 5px;
+}
+

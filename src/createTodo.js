@@ -16,6 +16,8 @@ export function createTask() {
     inputDiv.classList.add("todo__input__div");
     const todoInput = document.createElement("input");
     todoInput.classList.add("todo__input");
+    const date = document.createElement('input');
+    date.type = 'date';
     const todoBtnDiv = document.createElement("div");
     todoBtnDiv.classList.add("todo__button__div");
     const addTodoBtn = document.createElement("button");
@@ -29,6 +31,7 @@ export function createTask() {
     todoBtnDiv.appendChild(cancelTodoBtn);
 
     inputDiv.appendChild(todoInput);
+    inputDiv.appendChild(date);
     inputDiv.appendChild(todoBtnDiv);
 
     main.appendChild(inputDiv);
@@ -36,17 +39,25 @@ export function createTask() {
     addTodoBtn.addEventListener("click", (taskBtn) => {
       taskBtn = document.querySelector(".project__tasks");
       const userInput = todoInput.value;
+      const dateInput = date.value;
 
-      if (userInput.length === 0) {
-        alert("Please enter a task in the box.");
+      console.log(dateInput)
+
+      if (userInput.length === 0 || dateInput.length === 0) {
+        alert("Please enter a task in the box or a valid date.");
       } else {
         const todoDiv = document.createElement("div");
         const todo = document.createElement("div");
+        const todoDate = document.createElement("div");
         const trashIcon = new Image();
+        
         trashIcon.src = Trash;
+        trashIcon.classList.add('trash')
         todo.classList.add("todo");
-
+        todoDate.classList.add("todo__date");
         todo.textContent = userInput;
+        todoDate.textContent = dateInput
+        todo.appendChild(todoDate);
         todo.appendChild(trashIcon);
 
         todoDiv.appendChild(todo);
@@ -55,8 +66,18 @@ export function createTask() {
         inputDiv.style.display = "none";
 
         main.appendChild(todoDiv);
+
+
+        trashIcon.addEventListener('click', () => {
+  
+          todo.remove();
+        })
       }
+
+      
     });
+
+    
 
     cancelTodoBtn.addEventListener("click", (taskBtn) => {
       taskBtn = document.querySelector(".project__tasks");
@@ -65,6 +86,9 @@ export function createTask() {
       inputDiv.style.display = "none";
     });
   });
+
+
+
 
   console.log("Create todo is working");
 }

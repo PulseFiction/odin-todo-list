@@ -19,6 +19,7 @@ export function onLoad() {
     const inboxDiv = document.createElement("div");
     inboxDiv.classList.add("inbox");
     const inbox = document.createElement("h3");
+    inbox.classList.add('inbox__button')
     inbox.textContent = "Inbox";
     const inboxIcon = new Image();
     inboxIcon.src = Inbox;
@@ -34,6 +35,7 @@ export function onLoad() {
     const todayDiv = document.createElement("div");
     todayDiv.classList.add("today");
     const today = document.createElement("h3");
+    today.classList.add('today__button');
     today.textContent = "Today";
     const todayIcon = new Image();
     todayIcon.src = Calendar;
@@ -48,6 +50,7 @@ export function onLoad() {
     const upcomingDiv = document.createElement("div");
     upcomingDiv.classList.add("upcoming");
     const upcoming = document.createElement("h3");
+    upcoming.classList.add('upcoming__button');
     upcoming.textContent = "Upcoming";
     
     const upcomingIcon = new Image();
@@ -109,6 +112,8 @@ export function onLoad() {
     content.appendChild(sideBarDiv);
     content.appendChild(headerDiv);
     content.appendChild(mainDiv);
+
+    // local Storage
 
     
 

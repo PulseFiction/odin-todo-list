@@ -4,6 +4,7 @@ export function createTask() {
   const main = document.querySelector(".main");
 
   main.addEventListener("click", (e) => {
+
     let target = e.target;
 
     if (target.className !== "project__tasks") return;
@@ -34,6 +35,7 @@ export function createTask() {
     inputDiv.appendChild(date);
     inputDiv.appendChild(todoBtnDiv);
 
+    
     main.appendChild(inputDiv);
 
     addTodoBtn.addEventListener("click", (taskBtn) => {
@@ -41,11 +43,14 @@ export function createTask() {
       const userInput = todoInput.value;
       const dateInput = date.value;
 
+
       console.log(dateInput)
 
       if (userInput.length === 0 || dateInput.length === 0) {
         alert("Please enter a task in the box or a valid date.");
       } else {
+        const todoContainer = document.createElement("div");
+        todoContainer.classList.add("todo__container");
         const todoDiv = document.createElement("div");
         const todo = document.createElement("div");
         const todoDate = document.createElement("div");
@@ -65,7 +70,9 @@ export function createTask() {
         taskBtn.style.display = "flex";
         inputDiv.style.display = "none";
 
-        main.appendChild(todoDiv);
+        main.appendChild(todoContainer);
+        todoContainer.appendChild(todoDiv);
+       
 
 
         trashIcon.addEventListener('click', () => {

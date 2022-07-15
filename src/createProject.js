@@ -29,6 +29,9 @@ export function addProject() {
         const arrowIcon = new Image();
         arrowIcon.src = Arrow;
         projectListItem.appendChild(arrowIcon);
+        
+        
+        
 
 
 
@@ -44,6 +47,8 @@ export function addProject() {
 
         projectListName.textContent = titleInput.value;
 
+        
+
         projectListItem.appendChild(projectListName);
 
         projectsList.appendChild(projectListItem);
@@ -51,6 +56,9 @@ export function addProject() {
         button.style.display = "block";
         submit.style.display = "none";
         titleInput.style.display = "none";
+
+        // Local Storage
+        localStorage.setItem('title', projectListName.textContent);
       }
     });
   });

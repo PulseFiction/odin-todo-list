@@ -23,17 +23,20 @@ export function openProject() {
         projectPage.style.display = 'flex';
 
         const taskDiv = document.createElement('button');
+
         taskDiv.classList.add('project__tasks')
-        const taskText = document.createElement('p');
         taskDiv.textContent = 'Add new Task';
         const addIcon = new Image();
+        addIcon.classList.add('add__white');
         addIcon.src = addWhite;
+
+        
         taskDiv.appendChild(addIcon);
   
         
+        if (!projectPage.hasChildNodes()) projectPage.appendChild(taskDiv);
 
-        projectPage.appendChild(taskDiv);
-
+        
         
         
     }
